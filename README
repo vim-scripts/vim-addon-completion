@@ -1,0 +1,20 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3018
+
+This plugin defines a global list of available completion functions so that you can switch completion functions fast.
+
+If you write a plugin which provides completion functions be kind to your users and use this plugin to never override the choice of a user.
+
+You can register your completion function to a global list optionally specifying a filetype scope such as "xml".
+
+When you start completion using <c-x><c-o> you'll be asked which completion function should be used if there are more than one available. This <c-x><c-o> mapping will set 'omnicomplete' by default.
+completefunc will be set to the next completefunc automatically (if it wasn't set by you).
+
+If you jump to a different buffer your last choice will be remembered depending on filetype.
+
+Of course setting a default function can still be annoying. Thus you can just set it in a ftplugin file this way:
+CFComplete haxe#CompleteClassName
+
+Of course there are mappings to cycle through completion functions as well
+
+Have a look at this description:
+http://github.com/MarcWeber/vim-addon-completion/blob/master/doc/vim-addon-completion.txt
